@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Blood Testing Lab</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #b71c1c;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px 20px;
+            background: white;
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .contact-info div {
+            flex: 1;
+            padding: 20px;
+            min-width: 250px;
+        }
+
+        .contact-info h3 {
+            color: #b71c1c;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #b71c1c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #9a1414;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+        <p>Get in Touch with Our Blood Testing Experts</p>
+    </header>
+
+    <section class="contact-section">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+            <div>
+                <h3>📍 Address</h3>
+                <p>123 Health Street, Mumbai, India</p>
+            </div>
+            <div>
+                <h3>📞 Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+            <div>
+                <h3>✉️ Email</h3>
+                <p>support@bloodtestlab.com</p>
+            </div>
+        </div>
+
+        <h2>Send Us a Message</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Blood Testing Lab. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

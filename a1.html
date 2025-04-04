@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Test Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            cursor: pointer;
+            transition: border 0.3s;
+            position: relative;
+        }
+        .tooltip {
+            position: absolute;
+            background: black;
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 5px;
+            display: none;
+        }
+        .liked {
+            border: 3px solid red;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Blood Test Clinic - Image Gallery</h2>
+    <div class="gallery">
+        <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+            <img src="cbc.jpg" alt="Complete Blood Count (CBC)" onclick="openModal(this)" ondblclick="likeImage(this)">
+            <div class="tooltip">Complete Blood Count (CBC)</div>
+        </div>
+        <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+            <img src="glucose.jpg" alt="Blood Glucose Test" onclick="openModal(this)" ondblclick="likeImage(this)">
+            <div class="tooltip">Blood Glucose Test</div>
+        </div>
+        <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+            <img src="lipid.jpg" alt="Lipid Panel" onclick="openModal(this)" ondblclick="likeImage(this)">
+            <div class="tooltip">Lipid Panel</div>
+        </div>
+        <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+            <img src="thyroid.jpg" alt="Thyroid Function Test" onclick="openModal(this)" ondblclick="likeImage(this)">
+            <div class="tooltip">Thyroid Function Test</div>
+        </div>
+        <div class="image-container" onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">
+            <img src="coagulation.jpg" alt="Coagulation Test" onclick="openModal(this)" ondblclick="likeImage(this)">
+            <div class="tooltip">Coagulation Test</div>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img">
+    </div>
+    
+    <script>
+        function showTooltip(event) {
+            let tooltip = event.currentTarget.querySelector('.tooltip');
+            tooltip.style.display = 'block';
+        }
+        
+        function hideTooltip(event) {
+            let tooltip = event.currentTarget.querySelector('.tooltip');
+            tooltip.style.display = 'none';
+        }
+        
+        function openModal(img) {
+            document.getElementById('modal-img').src = img.src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+        
+        function likeImage(img) {
+            img.classList.toggle('liked');
+        }
+    </script>
+</body>
+</html>
